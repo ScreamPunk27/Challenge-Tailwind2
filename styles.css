@@ -1,0 +1,23 @@
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:1024px) {
+    #contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "logo contenido" "footer footer";
+    }
+    header {
+        grid-area: logo;
+    }
+    #cuerpo {
+        grid-area: contenido;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
